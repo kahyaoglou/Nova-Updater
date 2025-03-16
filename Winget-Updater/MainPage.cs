@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,7 @@ namespace Winget_Updater
 
         private void btnUpdateAll_Click(object sender, EventArgs e)
         {
-            UpdateAllApps updateAllApps = new UpdateAllApps();
-            updateAllApps.Show();
-            this.Hide();
+            WingetUpdater.UpdateAllApps();
         }
 
         private void btnUpdateSelected_Click(object sender, EventArgs e)
