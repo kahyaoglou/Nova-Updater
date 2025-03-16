@@ -46,5 +46,10 @@ namespace Winget_Updater
             mainPage.Show();
             this.Hide();
         }
+
+        private void UpdateSelectedApp_Load(object sender, EventArgs e)
+        {
+            ThemeManager.ApplyTheme(this);
+        }
     }
 }

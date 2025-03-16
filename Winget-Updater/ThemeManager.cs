@@ -1,49 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Winget_Updater
 {
-    public partial class MainPage : Form
+    public static class ThemeManager
     {
-        public MainPage()
+        public static void ApplyTheme(Form form)
         {
-            ApplyTheme();
-            InitializeComponent();
-        }
+            bool isDarkMode = Properties.Settings.Default.IsDarkMode;
 
-        private void btnUpdateAll_Click(object sender, EventArgs e)
-        {
-            WingetUpdater.UpdateAllApps();
-        }
-
-        private void btnUpdateSelected_Click(object sender, EventArgs e)
-        {
-            UpdateSelectedApp updateSelectedApp = new UpdateSelectedApp();
-            updateSelectedApp.Show();
-            this.Hide();
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void ApplyTheme()
-        {
-            if (Properties.Settings.Default.IsDarkMode)
+            if (isDarkMode)
             {
-                this.BackColor = Color.FromArgb(30, 30, 30);
-                this.ForeColor = Color.White;
+                form.BackColor = Color.FromArgb(30, 30, 30);
+                form.ForeColor = Color.White;
 
-                foreach (Control ctrl in this.Controls)
+                foreach (Control ctrl in form.Controls)
                 {
                     if (ctrl is Button btn)
                     {
@@ -59,14 +33,18 @@ namespace Winget_Updater
                     {
                         lbl.ForeColor = Color.White;
                     }
+                    else if (ctrl is Panel pnl)
+                    {
+                        pnl.BackColor = Color.FromArgb(40, 40, 40);
+                    }
                 }
             }
             else
             {
-                this.BackColor = SystemColors.Control;
-                this.ForeColor = SystemColors.ControlText;
+                form.BackColor = SystemColors.Control;
+                form.ForeColor = SystemColors.ControlText;
 
-                foreach (Control ctrl in this.Controls)
+                foreach (Control ctrl in form.Controls)
                 {
                     if (ctrl is Button btn)
                     {
@@ -82,19 +60,18 @@ namespace Winget_Updater
                     {
                         lbl.ForeColor = SystemColors.ControlText;
                     }
+                    else if (ctrl is Panel pnl)
+                    {
+                        pnl.BackColor = SystemColors.Control;
+                    }
                 }
             }
         }
 
-        private void btnToggleDarkMode_Click(object sender, EventArgs e)
+        public static void ToggleDarkMode()
         {
-            ThemeManager.ToggleDarkMode();
-            ThemeManager.ApplyTheme(this);
-        }
-
-        private void MainPage_Load(object sender, EventArgs e)
-        {
-            ThemeManager.ApplyTheme(this);
+            Properties.Settings.Default.IsDarkMode = !Properties.Settings.Default.IsDarkMode;
+            Properties.Settings.Default.Save();
         }
     }
 }

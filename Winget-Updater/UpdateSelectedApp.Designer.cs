@@ -78,6 +78,7 @@
             ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.None;
             Name = "UpdateSelectedApp";
+            Load += UpdateSelectedApp_Load;
             ((System.ComponentModel.ISupportInitialize)btnClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnBack).EndInit();
             ResumeLayout(false);

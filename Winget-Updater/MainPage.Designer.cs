@@ -32,6 +32,7 @@
             btnUpdateAll = new Button();
             btnUpdateSelected = new Button();
             btnClose = new PictureBox();
+            btnToggleDarkMode = new Button();
             ((System.ComponentModel.ISupportInitialize)btnClose).BeginInit();
             SuspendLayout();
             // 
@@ -58,16 +59,25 @@
             btnClose.TabStop = false;
             btnClose.Click += btnClose_Click;
             // 
+            // btnToggleDarkMode
+            // 
+            resources.ApplyResources(btnToggleDarkMode, "btnToggleDarkMode");
+            btnToggleDarkMode.Name = "btnToggleDarkMode";
+            btnToggleDarkMode.UseVisualStyleBackColor = true;
+            btnToggleDarkMode.Click += btnToggleDarkMode_Click;
+            // 
             // MainPage
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
+            Controls.Add(btnToggleDarkMode);
             Controls.Add(btnClose);
             Controls.Add(btnUpdateSelected);
             Controls.Add(btnUpdateAll);
             FormBorderStyle = FormBorderStyle.None;
             Name = "MainPage";
+            Load += MainPage_Load;
             ((System.ComponentModel.ISupportInitialize)btnClose).EndInit();
             ResumeLayout(false);
         }
@@ -77,5 +87,6 @@
         private Button btnUpdateAll;
         private Button btnUpdateSelected;
         private PictureBox btnClose;
+        private Button btnToggleDarkMode;
     }
 }
