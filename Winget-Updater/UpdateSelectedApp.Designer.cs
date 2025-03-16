@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateSelectedApp));
             listBoxApps = new ListBox();
             btnUpdate = new Button();
+            btnClose = new PictureBox();
+            btnBack = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)btnClose).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnBack).BeginInit();
             SuspendLayout();
             // 
             // listBoxApps
@@ -46,13 +50,36 @@
             btnUpdate.UseVisualStyleBackColor = true;
             btnUpdate.Click += btnUpdate_Click;
             // 
+            // btnClose
+            // 
+            resources.ApplyResources(btnClose, "btnClose");
+            btnClose.Cursor = Cursors.Hand;
+            btnClose.Image = Properties.Resources.close;
+            btnClose.Name = "btnClose";
+            btnClose.TabStop = false;
+            btnClose.Click += btnClose_Click;
+            // 
+            // btnBack
+            // 
+            resources.ApplyResources(btnBack, "btnBack");
+            btnBack.Cursor = Cursors.Hand;
+            btnBack.Name = "btnBack";
+            btnBack.TabStop = false;
+            btnBack.Click += btnBack_Click;
+            // 
             // UpdateSelectedApp
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnBack);
+            Controls.Add(btnClose);
             Controls.Add(btnUpdate);
             Controls.Add(listBoxApps);
+            ForeColor = SystemColors.ControlText;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "UpdateSelectedApp";
+            ((System.ComponentModel.ISupportInitialize)btnClose).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnBack).EndInit();
             ResumeLayout(false);
         }
 
@@ -60,5 +87,7 @@
 
         private ListBox listBoxApps;
         private Button btnUpdate;
+        private PictureBox btnClose;
+        private PictureBox btnBack;
     }
 }

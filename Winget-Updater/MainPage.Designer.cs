@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             btnUpdateAll = new Button();
             btnUpdateSelected = new Button();
+            btnClose = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)btnClose).BeginInit();
             SuspendLayout();
             // 
             // btnUpdateAll
@@ -47,13 +49,26 @@
             btnUpdateSelected.UseVisualStyleBackColor = true;
             btnUpdateSelected.Click += btnUpdateSelected_Click;
             // 
+            // btnClose
+            // 
+            resources.ApplyResources(btnClose, "btnClose");
+            btnClose.Cursor = Cursors.Hand;
+            btnClose.Image = Properties.Resources.close;
+            btnClose.Name = "btnClose";
+            btnClose.TabStop = false;
+            btnClose.Click += btnClose_Click;
+            // 
             // MainPage
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            AutoValidate = AutoValidate.EnablePreventFocusChange;
+            Controls.Add(btnClose);
             Controls.Add(btnUpdateSelected);
             Controls.Add(btnUpdateAll);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "MainPage";
+            ((System.ComponentModel.ISupportInitialize)btnClose).EndInit();
             ResumeLayout(false);
         }
 
@@ -61,5 +76,6 @@
 
         private Button btnUpdateAll;
         private Button btnUpdateSelected;
+        private PictureBox btnClose;
     }
 }
