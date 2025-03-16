@@ -7,7 +7,7 @@ namespace Winget_Updater
     public static class WingetUpdater
     {
         // Belirli bir uygulamayı güncellemek için
-        public static void UpdateApp(string appName)
+        public static void UpdateApp(string? appName)
         {
             try
             {
