@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Winget_Updater
 {
-    public partial class Form2: Form
+    public partial class UpdateSelectedApp: Form
     {
-        public Form2()
+        public UpdateSelectedApp()
         {
             InitializeComponent();
             LoadInstalledApps();

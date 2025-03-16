@@ -2,9 +2,9 @@ using System.Diagnostics;
 
 namespace Winget_Updater
 {
-    public partial class Form1 : Form
+    public partial class UpdateAllApps : Form
     {
-        public Form1()
+        public UpdateAllApps()
         {
             InitializeComponent();
         }
