@@ -28,36 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateAllApps));
             btnUpdate = new Button();
             txtOutput = new TextBox();
             SuspendLayout();
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(198, 119);
+            resources.ApplyResources(btnUpdate, "btnUpdate");
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(75, 23);
-            btnUpdate.TabIndex = 0;
-            btnUpdate.Text = "button1";
             btnUpdate.UseVisualStyleBackColor = true;
             btnUpdate.Click += btnUpdate_Click;
             // 
             // txtOutput
             // 
-            txtOutput.Location = new Point(187, 148);
+            resources.ApplyResources(txtOutput, "txtOutput");
             txtOutput.Name = "txtOutput";
-            txtOutput.Size = new Size(100, 23);
-            txtOutput.TabIndex = 1;
             // 
-            // Form1
+            // UpdateAllApps
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
             Controls.Add(txtOutput);
             Controls.Add(btnUpdate);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "UpdateAllApps";
             ResumeLayout(false);
             PerformLayout();
         }

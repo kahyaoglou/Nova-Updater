@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Winget_Updater
 {
-    public partial class UpdateSelectedApp: Form
+    public partial class UpdateSelectedApp : Form
     {
         public UpdateSelectedApp()
         {

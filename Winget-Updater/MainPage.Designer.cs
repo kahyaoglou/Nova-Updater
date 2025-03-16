@@ -1,6 +1,6 @@
 ﻿namespace Winget_Updater
 {
-    partial class UpdateSelectedApp
+    partial class MainPage
     {
         /// <summary>
         /// Required designer variable.
@@ -28,37 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateSelectedApp));
-            listBoxApps = new ListBox();
-            btnUpdate = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
+            btnUpdateAll = new Button();
+            btnUpdateSelected = new Button();
             SuspendLayout();
             // 
-            // listBoxApps
+            // btnUpdateAll
             // 
-            resources.ApplyResources(listBoxApps, "listBoxApps");
-            listBoxApps.FormattingEnabled = true;
-            listBoxApps.Name = "listBoxApps";
+            resources.ApplyResources(btnUpdateAll, "btnUpdateAll");
+            btnUpdateAll.Name = "btnUpdateAll";
+            btnUpdateAll.UseVisualStyleBackColor = true;
+            btnUpdateAll.Click += btnUpdateAll_Click;
             // 
-            // btnUpdate
+            // btnUpdateSelected
             // 
-            resources.ApplyResources(btnUpdate, "btnUpdate");
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.UseVisualStyleBackColor = true;
-            btnUpdate.Click += btnUpdate_Click;
+            resources.ApplyResources(btnUpdateSelected, "btnUpdateSelected");
+            btnUpdateSelected.Name = "btnUpdateSelected";
+            btnUpdateSelected.UseVisualStyleBackColor = true;
+            btnUpdateSelected.Click += btnUpdateSelected_Click;
             // 
-            // UpdateSelectedApp
+            // MainPage
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(btnUpdate);
-            Controls.Add(listBoxApps);
-            Name = "UpdateSelectedApp";
+            Controls.Add(btnUpdateSelected);
+            Controls.Add(btnUpdateAll);
+            Name = "MainPage";
             ResumeLayout(false);
         }
 
         #endregion
 
-        private ListBox listBoxApps;
-        private Button btnUpdate;
+        private Button btnUpdateAll;
+        private Button btnUpdateSelected;
     }
 }
