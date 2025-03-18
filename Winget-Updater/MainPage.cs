@@ -15,7 +15,6 @@ namespace Winget_Updater
     {
         public MainPage()
         {
-            ApplyTheme();
             InitializeComponent();
         }
 
@@ -34,56 +33,6 @@ namespace Winget_Updater
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void ApplyTheme()
-        {
-            if (Properties.Settings.Default.IsDarkMode)
-            {
-                this.BackColor = Color.FromArgb(30, 30, 30);
-                this.ForeColor = Color.White;
-
-                foreach (Control ctrl in this.Controls)
-                {
-                    if (ctrl is Button btn)
-                    {
-                        btn.BackColor = Color.FromArgb(50, 50, 50);
-                        btn.ForeColor = Color.White;
-                    }
-                    else if (ctrl is TextBox txt)
-                    {
-                        txt.BackColor = Color.FromArgb(45, 45, 45);
-                        txt.ForeColor = Color.White;
-                    }
-                    else if (ctrl is Label lbl)
-                    {
-                        lbl.ForeColor = Color.White;
-                    }
-                }
-            }
-            else
-            {
-                this.BackColor = SystemColors.Control;
-                this.ForeColor = SystemColors.ControlText;
-
-                foreach (Control ctrl in this.Controls)
-                {
-                    if (ctrl is Button btn)
-                    {
-                        btn.BackColor = SystemColors.Control;
-                        btn.ForeColor = SystemColors.ControlText;
-                    }
-                    else if (ctrl is TextBox txt)
-                    {
-                        txt.BackColor = SystemColors.Window;
-                        txt.ForeColor = SystemColors.WindowText;
-                    }
-                    else if (ctrl is Label lbl)
-                    {
-                        lbl.ForeColor = SystemColors.ControlText;
-                    }
-                }
-            }
         }
 
         private void MainPage_Load(object sender, EventArgs e)
