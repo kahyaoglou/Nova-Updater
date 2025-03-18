@@ -4,16 +4,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Winget_Updater
+namespace Winget_Updater.Helpers
 {
     public static class WingetHelper
     {
-        public static void OpenForm(Form currentForm, Form newForm)
-        {
-            newForm.Show();
-            currentForm.Hide();
-        }
-
         public static List<string> GetInstalledApps()
         {
             List<string> installedApps = new List<string>();

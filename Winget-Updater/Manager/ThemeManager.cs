@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Winget_Updater
+namespace Winget_Updater.Manager
 {
     public static class ThemeManager
     {

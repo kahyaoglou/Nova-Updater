@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using Winget_Updater.Helpers;
+using Winget_Updater.Manager;
 
 namespace Winget_Updater
 {
@@ -13,8 +15,8 @@ namespace Winget_Updater
 
         private void LoadInstalledApps()
         {
-            listBoxApps.Items.Clear(); // Önce listeyi temizle
-            var apps = WingetHelper.GetInstalledApps(); // Yeni sınıftan çağır
+            listBoxApps.Items.Clear();
+            var apps = WingetHelper.GetInstalledApps();
 
             foreach (var app in apps)
             {
@@ -27,7 +29,8 @@ namespace Winget_Updater
             if (listBoxApps.SelectedItem != null)
             {
                 string? selectedApp = listBoxApps.SelectedItem.ToString();
-                WingetUpdater.UpdateApp(selectedApp);
+                WingetManager.UpdateAppOrAll(false, selectedApp);
+
             }
             else
             {
@@ -42,7 +45,7 @@ namespace Winget_Updater
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            WingetHelper.OpenForm(this, new MainPage());
+            SliderHelper.OpenForm(this, new MainPage());
         }
 
         private void UpdateSelectedApp_Load(object sender, EventArgs e)
