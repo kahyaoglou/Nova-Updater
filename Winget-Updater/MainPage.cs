@@ -86,14 +86,14 @@ namespace Winget_Updater
             }
         }
 
-        private void btnToggleDarkMode_Click(object sender, EventArgs e)
+        private void MainPage_Load(object sender, EventArgs e)
         {
-            ThemeManager.ToggleDarkMode();
             ThemeManager.ApplyTheme(this);
         }
 
-        private void MainPage_Load(object sender, EventArgs e)
+        private void btnToggleDarkMode_Click(object sender, EventArgs e)
         {
+            ThemeManager.ToggleDarkMode();
             ThemeManager.ApplyTheme(this);
         }
     }
