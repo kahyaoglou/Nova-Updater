@@ -27,7 +27,7 @@ namespace Winget_Updater
             if (listBoxApps.SelectedItem != null)
             {
                 string? selectedApp = listBoxApps.SelectedItem.ToString();
-                WingetUpdater.UpdateApp(selectedApp); // Yeni metodu çağır
+                WingetUpdater.UpdateApp(selectedApp);
             }
             else
             {
@@ -42,9 +42,7 @@ namespace Winget_Updater
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            MainPage mainPage = new MainPage();
-            mainPage.Show();
-            this.Hide();
+            WingetHelper.OpenForm(this, new MainPage());
         }
 
         private void UpdateSelectedApp_Load(object sender, EventArgs e)

@@ -25,9 +25,7 @@ namespace Winget_Updater
 
         private void btnUpdateSelected_Click(object sender, EventArgs e)
         {
-            UpdateSelectedApp updateSelectedApp = new UpdateSelectedApp();
-            updateSelectedApp.Show();
-            this.Hide();
+            WingetHelper.OpenForm(this, new UpdateSelectedApp());
         }
 
         private void btnClose_Click(object sender, EventArgs e)

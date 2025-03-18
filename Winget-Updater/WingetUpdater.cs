@@ -6,7 +6,6 @@ namespace Winget_Updater
 {
     public static class WingetUpdater
     {
-        // Belirli bir uygulamayı güncellemek için
         public static void UpdateApp(string? appName)
         {
             try
@@ -26,8 +25,6 @@ namespace Winget_Updater
                 MessageBox.Show($"Hata: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // Tüm uygulamaları güncellemek için
         public static void UpdateAllApps()
         {
             try
