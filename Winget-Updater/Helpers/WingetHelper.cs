@@ -20,7 +20,8 @@ namespace Winget_Updater.Helpers
                     Arguments = "/c winget list",
                     RedirectStandardOutput = true,
                     UseShellExecute = false,
-                    CreateNoWindow = true
+                    CreateNoWindow = true,
+                    StandardOutputEncoding = System.Text.Encoding.UTF8
                 };
 
                 Process process = new Process { StartInfo = psi };
