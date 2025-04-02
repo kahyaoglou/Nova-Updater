@@ -13,15 +13,22 @@ namespace Winget_Updater
             LoadInstalledApps();
         }
 
-        private void LoadInstalledApps()
+        private async void LoadInstalledApps()
         {
             listBoxApps.Items.Clear();
-            var apps = WingetHelper.GetInstalledApps();
+            toolStripStatusLabel.Text = "Uygulamalar getiriliyor...";
 
+            var apps = await Task.Run(() => WingetHelper.GetInstalledApps());
+
+            listBoxApps.Items.Clear();
             foreach (var app in apps)
             {
                 listBoxApps.Items.Add(app);
             }
+
+            toolStripStatusLabel.Text = "Uygulamalar başarıyla getirildi!";
+            await Task.Delay(2000);
+            toolStripStatusLabel.Text = "";
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -30,7 +37,6 @@ namespace Winget_Updater
             {
                 string? selectedApp = listBoxApps.SelectedItem.ToString();
                 WingetManager.UpdateAppOrAll(false, selectedApp);
-
             }
             else
             {

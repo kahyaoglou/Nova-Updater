@@ -33,8 +33,11 @@
             btnUpdate = new Button();
             btnClose = new PictureBox();
             btnBack = new PictureBox();
+            StripStatusZone = new StatusStrip();
+            toolStripStatusLabel = new ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)btnClose).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnBack).BeginInit();
+            StripStatusZone.SuspendLayout();
             SuspendLayout();
             // 
             // listBoxApps
@@ -67,10 +70,22 @@
             btnBack.TabStop = false;
             btnBack.Click += btnBack_Click;
             // 
+            // StripStatusZone
+            // 
+            resources.ApplyResources(StripStatusZone, "StripStatusZone");
+            StripStatusZone.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel });
+            StripStatusZone.Name = "StripStatusZone";
+            // 
+            // toolStripStatusLabel
+            // 
+            resources.ApplyResources(toolStripStatusLabel, "toolStripStatusLabel");
+            toolStripStatusLabel.Name = "toolStripStatusLabel";
+            // 
             // UpdateSelectedApp
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(StripStatusZone);
             Controls.Add(btnBack);
             Controls.Add(btnClose);
             Controls.Add(btnUpdate);
@@ -81,7 +96,10 @@
             Load += UpdateSelectedApp_Load;
             ((System.ComponentModel.ISupportInitialize)btnClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnBack).EndInit();
+            StripStatusZone.ResumeLayout(false);
+            StripStatusZone.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -90,5 +108,7 @@
         private Button btnUpdate;
         private PictureBox btnClose;
         private PictureBox btnBack;
+        private StatusStrip StripStatusZone;
+        private ToolStripStatusLabel toolStripStatusLabel;
     }
 }

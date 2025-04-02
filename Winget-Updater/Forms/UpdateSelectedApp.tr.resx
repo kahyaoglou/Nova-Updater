@@ -122,10 +122,10 @@
     <value>12, 58</value>
   </data>
   <data name="listBoxApps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>426, 349</value>
+    <value>426, 334</value>
   </data>
   <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 413</value>
+    <value>12, 400</value>
   </data>
   <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
     <value>426, 25</value>
@@ -143,7 +143,7 @@
   <data name="btnBack.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACvFSURBVHhe7d0L
+        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACvFSURBVHhe7d0L
         lJ1Vfffx/zkzmUkmk0zI5DKT20y434JyR1wKwZJCgRCgvgKxlmslIC9vkFKhFNFGRGgiKcTaegPbtaqC
         tlatgL6tpYAVq1z6iriqgqKo0IKBVyn01f2uPZlA8uw9M88557nsvf/fz1q/5VqAkHnOybN/OXPOb0QA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -338,6 +338,25 @@
   </data>
   <data name="btnBack.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
+  </data>
+  <data name="toolStripStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 17</value>
+  </data>
+  <data name="toolStripStatusLabel.Text" xml:space="preserve">
+    <value>toolStripStatusLabel1</value>
+  </data>
+  <data name="StripStatusZone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 428</value>
+  </data>
+  <data name="StripStatusZone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>450, 22</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="StripStatusZone.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="StripStatusZone.Text" xml:space="preserve">
+    <value>statusStrip1</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>450, 450</value>
