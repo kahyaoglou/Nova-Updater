@@ -86,6 +86,7 @@
             Name = "UpdateAllApps";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "UpdateAllApps";
+            Load += UpdateAllApps_Load;
             ((System.ComponentModel.ISupportInitialize)btnBack).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnClose).EndInit();
             ResumeLayout(false);

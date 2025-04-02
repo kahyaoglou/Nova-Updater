@@ -33,5 +33,10 @@ namespace Winget_Updater.Forms
         {
             SliderHelper.OpenForm(this, new MainPage());
         }
+
+        private void UpdateAllApps_Load(object sender, EventArgs e)
+        {
+            ThemeManager.ApplyTheme(this);
+        }
     }
 }
