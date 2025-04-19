@@ -83,6 +83,7 @@
             Controls.Add(btnClose);
             Controls.Add(btnUpdateAll);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "UpdateAllApps";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "UpdateAllApps";
