@@ -17,19 +17,20 @@ namespace Winget_Updater
         {
             listBoxApps.Items.Clear();
             toolStripStatusLabel.Text = "Uygulamalar getiriliyor...";
-
             var apps = await Task.Run(() => WingetHelper.GetInstalledApps());
-
             listBoxApps.Items.Clear();
+
             foreach (var app in apps)
             {
                 listBoxApps.Items.Add(app);
             }
 
+            btnUpdate.Enabled = true;
             toolStripStatusLabel.Text = "Uygulamalar başarıyla getirildi!";
             await Task.Delay(2000);
             toolStripStatusLabel.Text = "";
         }
+
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
