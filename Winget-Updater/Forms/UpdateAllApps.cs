@@ -21,7 +21,7 @@ namespace Winget_Updater.Forms
 
         private void btnUpdateAll_Click(object sender, EventArgs e)
         {
-            WingetManager.UpdateAppOrAll(true);
+            WingetManager.UpdateAppOrAllAsync(true);
         }
 
         private void btnClose_Click(object sender, EventArgs e)

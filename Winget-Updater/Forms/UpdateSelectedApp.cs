@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Winget_Updater.Helpers;
 using Winget_Updater.Manager;
@@ -37,7 +38,7 @@ namespace Winget_Updater
             if (listBoxApps.SelectedItem != null)
             {
                 string? selectedApp = listBoxApps.SelectedItem.ToString();
-                WingetManager.UpdateAppOrAll(false, selectedApp);
+                WingetManager.UpdateAppOrAllAsync(false, selectedApp);
             }
             else
             {

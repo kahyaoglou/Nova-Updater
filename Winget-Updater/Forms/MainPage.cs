@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Winget_Updater.Forms;
 using Winget_Updater.Helpers;
 using Winget_Updater.Manager;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Winget_Updater
 {
@@ -24,6 +25,8 @@ namespace Winget_Updater
         private void MainPage_Load(object sender, EventArgs e)
         {
             ThemeManager.ApplyTheme(this);
+            toolTipInfo.SetToolTip(btnInfo, "TR - Winget Updater, bilgisayarınızdaki uygulamaları güncel tutmanızı kolaylaştırır. Tek tıkla güncelleyin. Furkan Eralp Kahyaoğlu tarafından geliştirilmiştir.\n" +
+                "EN - Winget Updater, makes it easy to keep the applications on your computer up to date. Update them with a single click. Developed by Furkan Eralp Kahyaoğlu.");
         }
 
         private void btnUpdateAll_Click(object sender, EventArgs e)
