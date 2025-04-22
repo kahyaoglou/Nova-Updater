@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace Winget_Updater.Manager
@@ -11,61 +7,33 @@ namespace Winget_Updater.Manager
     {
         public static void ApplyTheme(Form form)
         {
-            bool isDarkMode = Properties.Settings.Default.IsDarkMode;
+            bool isDark = Properties.Settings.Default.IsDarkMode;
 
-            if (isDarkMode)
+            form.BackColor = isDark ? Color.FromArgb(30, 30, 30) : SystemColors.Control;
+            form.ForeColor = isDark ? Color.White : SystemColors.ControlText;
+
+            foreach (Control ctrl in form.Controls)
+                ApplyThemeToControl(ctrl, isDark);
+        }
+
+        private static void ApplyThemeToControl(Control ctrl, bool isDark)
+        {
+            switch (ctrl)
             {
-                form.BackColor = Color.FromArgb(30, 30, 30);
-                form.ForeColor = Color.White;
-
-                foreach (Control ctrl in form.Controls)
-                {
-                    if (ctrl is Button btn)
-                    {
-                        btn.BackColor = Color.FromArgb(50, 50, 50);
-                        btn.ForeColor = Color.White;
-                    }
-                    else if (ctrl is TextBox txt)
-                    {
-                        txt.BackColor = Color.FromArgb(45, 45, 45);
-                        txt.ForeColor = Color.White;
-                    }
-                    else if (ctrl is Label lbl)
-                    {
-                        lbl.ForeColor = Color.White;
-                    }
-                    else if (ctrl is Panel pnl)
-                    {
-                        pnl.BackColor = Color.FromArgb(40, 40, 40);
-                    }
-                }
-            }
-            else
-            {
-                form.BackColor = SystemColors.Control;
-                form.ForeColor = SystemColors.ControlText;
-
-                foreach (Control ctrl in form.Controls)
-                {
-                    if (ctrl is Button btn)
-                    {
-                        btn.BackColor = SystemColors.Control;
-                        btn.ForeColor = SystemColors.ControlText;
-                    }
-                    else if (ctrl is TextBox txt)
-                    {
-                        txt.BackColor = SystemColors.Window;
-                        txt.ForeColor = SystemColors.WindowText;
-                    }
-                    else if (ctrl is Label lbl)
-                    {
-                        lbl.ForeColor = SystemColors.ControlText;
-                    }
-                    else if (ctrl is Panel pnl)
-                    {
-                        pnl.BackColor = SystemColors.Control;
-                    }
-                }
+                case Button btn:
+                    btn.BackColor = isDark ? Color.FromArgb(50, 50, 50) : SystemColors.Control;
+                    btn.ForeColor = isDark ? Color.White : SystemColors.ControlText;
+                    break;
+                case TextBox txt:
+                    txt.BackColor = isDark ? Color.FromArgb(45, 45, 45) : SystemColors.Window;
+                    txt.ForeColor = isDark ? Color.White : SystemColors.WindowText;
+                    break;
+                case Label lbl:
+                    lbl.ForeColor = isDark ? Color.White : SystemColors.ControlText;
+                    break;
+                case Panel pnl:
+                    pnl.BackColor = isDark ? Color.FromArgb(40, 40, 40) : SystemColors.Control;
+                    break;
             }
         }
 
@@ -75,23 +43,15 @@ namespace Winget_Updater.Manager
             Properties.Settings.Default.Save();
         }
 
-        public static void UpdateLogo(PictureBox pictureBoxMain, PictureBox pictureBoxInfo)
+        public static void UpdateLogo(PictureBox logo, PictureBox info)
         {
-            if (Properties.Settings.Default.IsDarkMode)
-            {
-                pictureBoxMain.Image = Properties.Resources.winget_updater_beige;
-                pictureBoxInfo.Image = Properties.Resources.info_beige;
-            }
-            else
-            {
-                pictureBoxMain.Image = Properties.Resources.winget_updater_navy;
-                pictureBoxInfo.Image = Properties.Resources.info_navy;
-            }
+            bool isDark = Properties.Settings.Default.IsDarkMode;
 
-            pictureBoxMain.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxInfo.SizeMode = PictureBoxSizeMode.Zoom;
+            logo.Image = isDark ? Properties.Resources.winget_updater_beige : Properties.Resources.winget_updater_navy;
+            info.Image = isDark ? Properties.Resources.info_beige : Properties.Resources.info_navy;
+
+            logo.SizeMode = PictureBoxSizeMode.Zoom;
+            info.SizeMode = PictureBoxSizeMode.Zoom;
         }
-
-
     }
 }
