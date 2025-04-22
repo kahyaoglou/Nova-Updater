@@ -34,12 +34,12 @@
             btnUpdateSelected = new Button();
             btnClose = new PictureBox();
             btnToggleDarkMode = new PictureBox();
-            pictureBox1 = new PictureBox();
+            pbxLogo = new PictureBox();
             toolTipInfo = new ToolTip(components);
             btnInfo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)btnClose).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnToggleDarkMode).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbxLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnInfo).BeginInit();
             SuspendLayout();
             // 
@@ -78,13 +78,13 @@
             toolTipInfo.SetToolTip(btnToggleDarkMode, resources.GetString("btnToggleDarkMode.ToolTip"));
             btnToggleDarkMode.Click += btnToggleDarkMode_Click;
             // 
-            // pictureBox1
+            // pbxLogo
             // 
-            resources.ApplyResources(pictureBox1, "pictureBox1");
-            pictureBox1.Image = Properties.Resources.Winget_Updater;
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.TabStop = false;
-            toolTipInfo.SetToolTip(pictureBox1, resources.GetString("pictureBox1.ToolTip"));
+            resources.ApplyResources(pbxLogo, "pbxLogo");
+            pbxLogo.Image = Properties.Resources.winget_updater_navy;
+            pbxLogo.Name = "pbxLogo";
+            pbxLogo.TabStop = false;
+            toolTipInfo.SetToolTip(pbxLogo, resources.GetString("pbxLogo.ToolTip"));
             // 
             // toolTipInfo
             // 
@@ -110,7 +110,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             Controls.Add(btnInfo);
-            Controls.Add(pictureBox1);
+            Controls.Add(pbxLogo);
             Controls.Add(btnToggleDarkMode);
             Controls.Add(btnClose);
             Controls.Add(btnUpdateSelected);
@@ -121,7 +121,7 @@
             Load += MainPage_Load;
             ((System.ComponentModel.ISupportInitialize)btnClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnToggleDarkMode).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnInfo).EndInit();
             ResumeLayout(false);
         }
@@ -132,7 +132,7 @@
         private Button btnUpdateSelected;
         private PictureBox btnClose;
         private PictureBox btnToggleDarkMode;
-        private PictureBox pictureBox1;
+        private PictureBox pbxLogo;
         private ToolTip toolTipInfo;
         private PictureBox btnInfo;
     }

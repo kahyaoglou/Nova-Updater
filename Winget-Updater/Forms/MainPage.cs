@@ -25,6 +25,7 @@ namespace Winget_Updater
         private void MainPage_Load(object sender, EventArgs e)
         {
             ThemeManager.ApplyTheme(this);
+            ThemeManager.UpdateLogo(pbxLogo);
             toolTipInfo.SetToolTip(btnInfo, "TR - Winget Updater, bilgisayarınızdaki uygulamaları güncel tutmanızı kolaylaştırır. Tek tıkla güncelleyin. Furkan Eralp Kahyaoğlu tarafından geliştirilmiştir.\n" +
                 "EN - Winget Updater, makes it easy to keep the applications on your computer up to date. Update them with a single click. Developed by Furkan Eralp Kahyaoğlu.");
         }
@@ -48,6 +49,7 @@ namespace Winget_Updater
         {
             ThemeManager.ToggleDarkMode();
             ThemeManager.ApplyTheme(this);
+            ThemeManager.UpdateLogo(pbxLogo);
         }
     }
 }

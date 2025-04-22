@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Winget_Updater.Manager
 {
@@ -73,5 +74,20 @@ namespace Winget_Updater.Manager
             Properties.Settings.Default.IsDarkMode = !Properties.Settings.Default.IsDarkMode;
             Properties.Settings.Default.Save();
         }
+
+        public static void UpdateLogo(PictureBox pictureBox)
+        {
+            if (Properties.Settings.Default.IsDarkMode)
+            {
+                pictureBox.Image = Properties.Resources.winget_updater_beige;
+            }
+            else
+            {
+                pictureBox.Image = Properties.Resources.winget_updater_navy;
+            }
+
+            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+
     }
 }
