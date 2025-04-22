@@ -73,6 +73,7 @@
             // 
             resources.ApplyResources(btnToggleDarkMode, "btnToggleDarkMode");
             btnToggleDarkMode.Cursor = Cursors.Hand;
+            btnToggleDarkMode.Image = Properties.Resources.darkmode;
             btnToggleDarkMode.Name = "btnToggleDarkMode";
             btnToggleDarkMode.TabStop = false;
             toolTipInfo.SetToolTip(btnToggleDarkMode, resources.GetString("btnToggleDarkMode.ToolTip"));
@@ -99,7 +100,7 @@
             // 
             resources.ApplyResources(btnInfo, "btnInfo");
             btnInfo.Cursor = Cursors.Hand;
-            btnInfo.Image = Properties.Resources.info;
+            btnInfo.Image = Properties.Resources.info_navy;
             btnInfo.Name = "btnInfo";
             btnInfo.TabStop = false;
             toolTipInfo.SetToolTip(btnInfo, resources.GetString("btnInfo.ToolTip"));

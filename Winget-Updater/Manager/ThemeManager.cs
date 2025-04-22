@@ -75,19 +75,23 @@ namespace Winget_Updater.Manager
             Properties.Settings.Default.Save();
         }
 
-        public static void UpdateLogo(PictureBox pictureBox)
+        public static void UpdateLogo(PictureBox pictureBoxMain, PictureBox pictureBoxInfo)
         {
             if (Properties.Settings.Default.IsDarkMode)
             {
-                pictureBox.Image = Properties.Resources.winget_updater_beige;
+                pictureBoxMain.Image = Properties.Resources.winget_updater_beige;
+                pictureBoxInfo.Image = Properties.Resources.info_beige;
             }
             else
             {
-                pictureBox.Image = Properties.Resources.winget_updater_navy;
+                pictureBoxMain.Image = Properties.Resources.winget_updater_navy;
+                pictureBoxInfo.Image = Properties.Resources.info_navy;
             }
 
-            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxMain.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxInfo.SizeMode = PictureBoxSizeMode.Zoom;
         }
+
 
     }
 }

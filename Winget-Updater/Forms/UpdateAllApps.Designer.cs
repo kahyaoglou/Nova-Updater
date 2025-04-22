@@ -51,7 +51,7 @@
             // btnBack
             // 
             btnBack.Cursor = Cursors.Hand;
-            btnBack.Image = (Image)resources.GetObject("btnBack.Image");
+            btnBack.Image = Properties.Resources.back;
             btnBack.ImeMode = ImeMode.NoControl;
             btnBack.Location = new Point(362, 12);
             btnBack.Name = "btnBack";

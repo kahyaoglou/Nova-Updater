@@ -66,6 +66,7 @@
             // 
             resources.ApplyResources(btnBack, "btnBack");
             btnBack.Cursor = Cursors.Hand;
+            btnBack.Image = Properties.Resources.back;
             btnBack.Name = "btnBack";
             btnBack.TabStop = false;
             btnBack.Click += btnBack_Click;
