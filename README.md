@@ -15,7 +15,7 @@ Winget Updater, Windows işletim sisteminde **winget** (Windows Package Manager)
 
 ## Kurulum
 1. **Setup Dosyasını İndirin:**
-   - [Son Sürümü İndir](https://github.com/kahyaoglou/Winget-Updater/releases/download/1.0.0.6/Winget-Updater.rar)
+   - [Son Sürümü İndir](https://github.com/kahyaoglou/Winget-Updater/releases/download/1.0.0.10/Winget-Updater.rar)
 
 2. **Kurulum:**
    - İndirilen `setup.exe` dosyasını çalıştırın.
