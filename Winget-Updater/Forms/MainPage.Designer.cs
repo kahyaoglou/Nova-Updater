@@ -37,6 +37,7 @@
             pbxLogo = new PictureBox();
             toolTipInfo = new ToolTip(components);
             btnInfo = new PictureBox();
+            btnWindowsApps = new Button();
             ((System.ComponentModel.ISupportInitialize)btnClose).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnToggleDarkMode).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxLogo).BeginInit();
@@ -105,11 +106,20 @@
             btnInfo.TabStop = false;
             toolTipInfo.SetToolTip(btnInfo, resources.GetString("btnInfo.ToolTip"));
             // 
+            // btnWindowsApps
+            // 
+            resources.ApplyResources(btnWindowsApps, "btnWindowsApps");
+            btnWindowsApps.Name = "btnWindowsApps";
+            toolTipInfo.SetToolTip(btnWindowsApps, resources.GetString("btnWindowsApps.ToolTip"));
+            btnWindowsApps.UseVisualStyleBackColor = true;
+            btnWindowsApps.Click += btnWindowsApps_Click;
+            // 
             // MainPage
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
+            Controls.Add(btnWindowsApps);
             Controls.Add(btnInfo);
             Controls.Add(pbxLogo);
             Controls.Add(btnToggleDarkMode);
@@ -136,5 +146,6 @@
         private PictureBox pbxLogo;
         private ToolTip toolTipInfo;
         private PictureBox btnInfo;
+        private Button btnWindowsApps;
     }
 }

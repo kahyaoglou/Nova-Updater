@@ -51,5 +51,10 @@ namespace Winget_Updater
             ThemeManager.ApplyTheme(this);
             ThemeManager.UpdateLogo(pbxLogo, btnInfo);
         }
+
+        private void btnWindowsApps_Click(object sender, EventArgs e)
+        {
+            WindowsUpdateManager.OpenWindowsUpdateSettings(this);
+        }
     }
 }
