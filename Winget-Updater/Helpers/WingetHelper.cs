@@ -66,6 +66,7 @@ namespace Winget_Updater.Helpers
                     }
                 }
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show($"Hata: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
