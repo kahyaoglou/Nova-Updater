@@ -18,7 +18,7 @@ namespace Winget_Updater
         {
             listBoxApps.Items.Clear();
             toolStripStatusLabel.Text = "Uygulamalar getiriliyor...";
-            var apps = await Task.Run(() => WingetHelper.GetInstalledApps());
+            var apps = await Task.Run(() => WingetHelper.GetUpgradableApps());
             listBoxApps.Items.Clear();
 
             foreach (var app in apps)

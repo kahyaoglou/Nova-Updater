@@ -8,16 +8,16 @@ namespace Winget_Updater.Helpers
 {
     public static class WingetHelper
     {
-        public static List<string> GetInstalledApps()
+        public static List<string> GetUpgradableApps()
         {
-            List<string> installedApps = new List<string>();
+            List<string> upgradableApps = new List<string>();
 
             try
             {
                 ProcessStartInfo psi = new ProcessStartInfo()
                 {
                     FileName = "cmd.exe",
-                    Arguments = "/c winget list",
+                    Arguments = "/c winget upgrade",
                     RedirectStandardOutput = true,
                     UseShellExecute = false,
                     CreateNoWindow = true,
@@ -32,12 +32,37 @@ namespace Winget_Updater.Helpers
 
                 string[] lines = output.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
 
-                foreach (string line in lines.Skip(2)) // İlk iki satır başlık olabilir, atlıyoruz.
+                bool startReading = false;
+
+                foreach (string line in lines)
                 {
-                    string[] parts = line.Split(new[] { "  " }, StringSplitOptions.RemoveEmptyEntries);
+                    string trimmedLine = line.Trim();
+
+                    if (!startReading)
+                    {
+                        if (trimmedLine.StartsWith("---"))
+                            startReading = true;
+
+                        continue;
+                    }
+
+                    if (
+                        trimmedLine.StartsWith("Name") ||
+                        trimmedLine.Contains("require explicit targeting") ||
+                        trimmedLine.Contains("cannot be determined") ||
+                        trimmedLine.Contains("--include-unknown") ||
+                        trimmedLine.Contains("upgrade available") ||
+                        trimmedLine.Contains("upgrades available") ||
+                        trimmedLine.Contains("package(s)") ||
+                        trimmedLine.StartsWith("---") ||
+                        string.IsNullOrWhiteSpace(trimmedLine)
+                    )
+                        continue;
+
+                    string[] parts = trimmedLine.Split(new[] { "  " }, StringSplitOptions.RemoveEmptyEntries);
                     if (parts.Length > 0)
                     {
-                        installedApps.Add(parts[0].Trim()); // İlk sütun uygulama adıdır
+                        upgradableApps.Add(parts[0].Trim());
                     }
                 }
             }
@@ -46,7 +71,7 @@ namespace Winget_Updater.Helpers
                 MessageBox.Show($"Hata: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            return installedApps;
+            return upgradableApps;
         }
     }
 }
