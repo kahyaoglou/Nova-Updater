@@ -26,8 +26,8 @@ namespace Nova_Updater
         {
             ThemeManager.ApplyTheme(this);
             ThemeManager.UpdateLogo(pbxLogo, btnInfo);
-            toolTipInfo.SetToolTip(btnInfo, "TR - Winget Updater, bilgisayarınızdaki uygulamaları güncel tutmanızı kolaylaştırır. Tek tıkla güncelleyin. Furkan Eralp Kahyaoğlu tarafından geliştirilmiştir.\n" +
-                "EN - Winget Updater, makes it easy to keep the applications on your computer up to date. Update them with a single click. Developed by Furkan Eralp Kahyaoğlu.");
+            toolTipInfo.SetToolTip(btnInfo, "TR - Nova Updater, bilgisayarınızdaki uygulamaları güncel tutmanızı kolaylaştırır. Tek tıkla güncelleyin. Furkan Eralp Kahyaoğlu tarafından geliştirilmiştir.\n" +
+                "EN - Nova Updater, makes it easy to keep the applications on your computer up to date. Update them with a single click. Developed by Furkan Eralp Kahyaoğlu.");
         }
 
         private void btnUpdateAll_Click(object sender, EventArgs e)

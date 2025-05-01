@@ -113,9 +113,9 @@ namespace Nova_Updater.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap winget_updater_beige {
+        internal static System.Drawing.Bitmap nova_updater_beige {
             get {
-                object obj = ResourceManager.GetObject("winget-updater-beige", resourceCulture);
+                object obj = ResourceManager.GetObject("nova-updater-beige", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace Nova_Updater.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap winget_updater_navy {
+        internal static System.Drawing.Bitmap nova_updater_navy {
             get {
-                object obj = ResourceManager.GetObject("winget-updater-navy", resourceCulture);
+                object obj = ResourceManager.GetObject("nova-updater-navy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

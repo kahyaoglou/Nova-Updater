@@ -64,7 +64,7 @@
             // 
             resources.ApplyResources(btnClose, "btnClose");
             btnClose.Cursor = Cursors.Hand;
-            btnClose.Image = Nova_Updater.Properties.Resources.close;
+            btnClose.Image = Properties.Resources.close;
             btnClose.Name = "btnClose";
             btnClose.TabStop = false;
             toolTipInfo.SetToolTip(btnClose, resources.GetString("btnClose.ToolTip"));
@@ -74,7 +74,7 @@
             // 
             resources.ApplyResources(btnToggleDarkMode, "btnToggleDarkMode");
             btnToggleDarkMode.Cursor = Cursors.Hand;
-            btnToggleDarkMode.Image = Nova_Updater.Properties.Resources.darkmode;
+            btnToggleDarkMode.Image = Properties.Resources.darkmode;
             btnToggleDarkMode.Name = "btnToggleDarkMode";
             btnToggleDarkMode.TabStop = false;
             toolTipInfo.SetToolTip(btnToggleDarkMode, resources.GetString("btnToggleDarkMode.ToolTip"));
@@ -83,7 +83,7 @@
             // pbxLogo
             // 
             resources.ApplyResources(pbxLogo, "pbxLogo");
-            pbxLogo.Image = Properties.Resources.winget_updater_navy;
+            pbxLogo.Image = Properties.Resources.nova_updater_navy;
             pbxLogo.Name = "pbxLogo";
             pbxLogo.TabStop = false;
             toolTipInfo.SetToolTip(pbxLogo, resources.GetString("pbxLogo.ToolTip"));

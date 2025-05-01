@@ -47,7 +47,7 @@ namespace Nova_Updater.Manager
         {
             bool isDark = Properties.Settings.Default.IsDarkMode;
 
-            logo.Image = isDark ? Properties.Resources.winget_updater_beige : Properties.Resources.winget_updater_navy;
+            logo.Image = isDark ? Properties.Resources.nova_updater_beige : Properties.Resources.nova_updater_navy;
             info.Image = isDark ? Properties.Resources.info_beige : Properties.Resources.info_navy;
 
             logo.SizeMode = PictureBoxSizeMode.Zoom;
