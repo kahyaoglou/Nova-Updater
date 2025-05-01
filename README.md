@@ -1,6 +1,6 @@
-# Winget Updater
+# Nova Updater
 
-Winget Updater, Windows işletim sisteminde **winget** (Windows Package Manager) komutlarını kullanarak uygulamaları kolayca güncellemenizi sağlayan bir masaüstü uygulamasıdır. Bu araç, hem tüm uygulamaları toplu olarak güncelleme hem de belirli bir uygulamayı seçerek güncelleme işlevselliği sunar.
+Nova Updater, Windows işletim sisteminde **winget** (Windows Package Manager) komutlarını kullanarak uygulamaları kolayca güncellemenizi sağlayan bir masaüstü uygulamasıdır. Bu araç, hem tüm uygulamaları toplu olarak güncelleme hem de belirli bir uygulamayı seçerek güncelleme işlevselliği sunar.
 
 ## Özellikler
 - **Tüm Uygulamaları Güncelleme:** Tek bir tıklama ile sistemdeki tüm uygulamaları güncelleyebilirsiniz.
@@ -15,7 +15,7 @@ Winget Updater, Windows işletim sisteminde **winget** (Windows Package Manager)
 
 ## Kurulum
 1. **Setup Dosyasını İndirin:**
-   - [Son Sürümü İndir](https://github.com/kahyaoglou/Winget-Updater/releases/download/1.0.0.10/Winget-Updater.rar)
+   - [Son Sürümü İndir](https://github.com/kahyaoglou/Nova-Updater/releases/download/1.0.0.10/Winget-Updater.rar)
 
 2. **Kurulum:**
    - İndirilen `setup.exe` dosyasını çalıştırın.
