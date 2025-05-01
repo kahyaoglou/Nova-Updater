@@ -95,7 +95,7 @@
             toolTipInfo.IsBalloon = true;
             toolTipInfo.Tag = "";
             toolTipInfo.ToolTipIcon = ToolTipIcon.Info;
-            toolTipInfo.ToolTipTitle = "Winget Updater © 2025";
+            toolTipInfo.ToolTipTitle = "Nova Updater © 2025";
             // 
             // btnInfo
             // 
