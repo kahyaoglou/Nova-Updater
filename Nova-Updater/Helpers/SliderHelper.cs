@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Winget_Updater.Helpers
+namespace Nova_Updater.Helpers
 {
     public class SliderHelper
     {

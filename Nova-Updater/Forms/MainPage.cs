@@ -8,12 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Winget_Updater.Forms;
-using Winget_Updater.Helpers;
-using Winget_Updater.Manager;
+using Nova_Updater.Forms;
+using Nova_Updater.Helpers;
+using Nova_Updater.Manager;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace Winget_Updater
+namespace Nova_Updater
 {
     public partial class MainPage : Form
     {

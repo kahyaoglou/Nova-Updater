@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Winget_Updater.Helpers
+namespace Nova_Updater.Helpers
 {
     public static class WingetHelper
     {

@@ -1,4 +1,4 @@
-﻿namespace Winget_Updater
+﻿namespace Nova_Updater
 {
     partial class MainPage
     {
@@ -64,7 +64,7 @@
             // 
             resources.ApplyResources(btnClose, "btnClose");
             btnClose.Cursor = Cursors.Hand;
-            btnClose.Image = Properties.Resources.close;
+            btnClose.Image = Nova_Updater.Properties.Resources.close;
             btnClose.Name = "btnClose";
             btnClose.TabStop = false;
             toolTipInfo.SetToolTip(btnClose, resources.GetString("btnClose.ToolTip"));
@@ -74,7 +74,7 @@
             // 
             resources.ApplyResources(btnToggleDarkMode, "btnToggleDarkMode");
             btnToggleDarkMode.Cursor = Cursors.Hand;
-            btnToggleDarkMode.Image = Properties.Resources.darkmode;
+            btnToggleDarkMode.Image = Nova_Updater.Properties.Resources.darkmode;
             btnToggleDarkMode.Name = "btnToggleDarkMode";
             btnToggleDarkMode.TabStop = false;
             toolTipInfo.SetToolTip(btnToggleDarkMode, resources.GetString("btnToggleDarkMode.ToolTip"));

@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace Winget_Updater.Manager
+namespace Nova_Updater.Manager
 {
     public static class ThemeManager
     {

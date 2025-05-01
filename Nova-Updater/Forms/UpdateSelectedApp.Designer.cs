@@ -1,4 +1,4 @@
-﻿namespace Winget_Updater
+﻿namespace Nova_Updater
 {
     partial class UpdateSelectedApp
     {

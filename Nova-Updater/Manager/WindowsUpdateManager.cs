@@ -2,9 +2,9 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
-using Winget_Updater.Forms;
+using Nova_Updater.Forms;
 
-namespace Winget_Updater.Manager
+namespace Nova_Updater.Manager
 {
     public static class WindowsUpdateManager
     {

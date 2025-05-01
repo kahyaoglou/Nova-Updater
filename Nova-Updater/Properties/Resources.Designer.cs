@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Winget_Updater.Properties {
+namespace Nova_Updater.Properties {
     using System;
     
     

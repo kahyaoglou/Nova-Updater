@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Winget_Updater.Helpers;
-using Winget_Updater.Manager;
+using Nova_Updater.Helpers;
+using Nova_Updater.Manager;
 
-namespace Winget_Updater
+namespace Nova_Updater
 {
     public partial class UpdateSelectedApp : Form
     {

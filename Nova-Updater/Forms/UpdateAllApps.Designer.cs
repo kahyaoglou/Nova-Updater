@@ -1,4 +1,4 @@
-﻿namespace Winget_Updater.Forms
+﻿namespace Nova_Updater.Forms
 {
     partial class UpdateAllApps
     {

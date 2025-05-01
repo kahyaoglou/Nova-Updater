@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Winget_Updater.Manager
+namespace Nova_Updater.Manager
 {
     public static class WingetManager
     {

@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Winget_Updater.Helpers;
-using Winget_Updater.Manager;
+using Nova_Updater.Helpers;
+using Nova_Updater.Manager;
 
-namespace Winget_Updater.Forms
+namespace Nova_Updater.Forms
 {
     public partial class UpdateAllApps : Form
     {
