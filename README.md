@@ -15,7 +15,7 @@ Nova Updater, Windows işletim sisteminde **winget** (Windows Package Manager) k
 
 ## Kurulum
 1. **Setup Dosyasını İndirin:**
-   - [Son Sürümü İndir](https://github.com/kahyaoglou/Nova-Updater/releases/download/v2.0.0.0/Nova-Updater.zip)
+   - [Son Sürümü İndir](https://github.com/kahyaoglou/Nova-Updater/releases/download/v2.0.0.1/Nova-Updater.rar)
 
 2. **Kurulum:**
    - İndirilen `setup.exe` dosyasını çalıştırın.
