@@ -192,6 +192,21 @@
   <data name="btnWindowsApps.Text" xml:space="preserve">
     <value>Windows Güncellemelerini Denetle</value>
   </data>
+  <data name="btnMicrosoftStoreApps.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 322</value>
+  </data>
+  <data name="btnMicrosoftStoreApps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnMicrosoftStoreApps.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnMicrosoftStoreApps.Text" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="btnMicrosoftStoreApps.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>

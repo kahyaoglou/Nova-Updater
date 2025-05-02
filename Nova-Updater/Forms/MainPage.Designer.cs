@@ -38,6 +38,7 @@
             toolTipInfo = new ToolTip(components);
             btnInfo = new PictureBox();
             btnWindowsApps = new Button();
+            btnMicrosoftStoreApps = new Button();
             ((System.ComponentModel.ISupportInitialize)btnClose).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnToggleDarkMode).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxLogo).BeginInit();
@@ -114,11 +115,20 @@
             btnWindowsApps.UseVisualStyleBackColor = true;
             btnWindowsApps.Click += btnWindowsApps_Click;
             // 
+            // btnMicrosoftStoreApps
+            // 
+            resources.ApplyResources(btnMicrosoftStoreApps, "btnMicrosoftStoreApps");
+            btnMicrosoftStoreApps.Name = "btnMicrosoftStoreApps";
+            toolTipInfo.SetToolTip(btnMicrosoftStoreApps, resources.GetString("btnMicrosoftStoreApps.ToolTip"));
+            btnMicrosoftStoreApps.UseVisualStyleBackColor = true;
+            btnMicrosoftStoreApps.Click += btnMicrosoftStoreApps_Click;
+            // 
             // MainPage
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
+            Controls.Add(btnMicrosoftStoreApps);
             Controls.Add(btnWindowsApps);
             Controls.Add(btnInfo);
             Controls.Add(pbxLogo);
@@ -147,5 +157,6 @@
         private ToolTip toolTipInfo;
         private PictureBox btnInfo;
         private Button btnWindowsApps;
+        private Button btnMicrosoftStoreApps;
     }
 }

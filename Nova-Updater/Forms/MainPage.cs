@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Nova_Updater.Forms;
 using Nova_Updater.Helpers;
 using Nova_Updater.Manager;
+using Winget_Updater.Manager;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Nova_Updater
@@ -55,6 +56,11 @@ namespace Nova_Updater
         private void btnWindowsApps_Click(object sender, EventArgs e)
         {
             WindowsUpdateManager.OpenWindowsUpdateSettings(this);
+        }
+
+        private void btnMicrosoftStoreApps_Click(object sender, EventArgs e)
+        {
+            MicrosoftStoreUpdateManager.OpenStoreUpdates(this);
         }
     }
 }
