@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnUpdateAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 351</value>
+    <value>12, 322</value>
   </data>
   <data name="btnUpdateAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>426, 25</value>
@@ -132,7 +132,7 @@
     <value>Bütün Uygulamaları Güncelle</value>
   </data>
   <data name="btnUpdateSelected.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 382</value>
+    <value>12, 353</value>
   </data>
   <data name="btnUpdateSelected.Size" type="System.Drawing.Size, System.Drawing">
     <value>426, 25</value>
@@ -166,7 +166,7 @@
     <value>StretchImage</value>
   </data>
   <data name="btnInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 322</value>
+    <value>415, 289</value>
   </data>
   <data name="btnInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 23</value>
@@ -181,7 +181,7 @@
     <value>Flat</value>
   </data>
   <data name="btnWindowsApps.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 413</value>
+    <value>12, 384</value>
   </data>
   <data name="btnWindowsApps.Size" type="System.Drawing.Size, System.Drawing">
     <value>426, 25</value>
@@ -192,20 +192,17 @@
   <data name="btnWindowsApps.Text" xml:space="preserve">
     <value>Windows Güncellemelerini Denetle</value>
   </data>
+  <data name="btnMicrosoftStoreApps.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <data name="btnMicrosoftStoreApps.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 322</value>
+    <value>12, 415</value>
   </data>
   <data name="btnMicrosoftStoreApps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="btnMicrosoftStoreApps.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>426, 23</value>
   </data>
   <data name="btnMicrosoftStoreApps.Text" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="btnMicrosoftStoreApps.ToolTip" xml:space="preserve">
-    <value />
+    <value>Microsoft Store Güncellemelerini Denetle</value>
   </data>
   <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
