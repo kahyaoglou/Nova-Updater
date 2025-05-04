@@ -53,5 +53,19 @@ namespace Nova_Updater.Manager
             logo.SizeMode = PictureBoxSizeMode.Zoom;
             info.SizeMode = PictureBoxSizeMode.Zoom;
         }
+
+        public static void StyleLastUpdateLabel(Label label)
+        {
+            bool isDark = Properties.Settings.Default.IsDarkMode;
+            Color foreColor = isDark ? Color.FromArgb(245, 245, 220) : Color.FromArgb(30, 51, 77);
+            label.Font = new Font("Segoe UI", 11F, FontStyle.Italic);
+            label.ForeColor = foreColor;
+            label.BorderStyle = BorderStyle.None;
+            label.TextAlign = ContentAlignment.MiddleCenter;
+            label.Padding = new Padding(4);
+            label.AutoSize = false;
+            label.Height = 30;
+            label.Width = 350;
+        }
     }
 }
