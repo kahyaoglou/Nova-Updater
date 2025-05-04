@@ -37,6 +37,17 @@ namespace Nova_Updater.Forms
         private void UpdateAllApps_Load(object sender, EventArgs e)
         {
             ThemeManager.ApplyTheme(this);
+            DateTime lastUpdate = Properties.Settings.Default.LastUpdateTime;
+
+            if (lastUpdate.Year < 2001)
+            {
+                lblLastUpdate.Text = "Henüz hiç güncelleme yapılmadı.";
+            }
+            else
+            {
+                TimeSpan difference = DateTime.Now - lastUpdate;
+                lblLastUpdate.Text = $"Son güncelleme: {lastUpdate:g} ({difference.Days} gün önce)";
+            }
         }
     }
 }

@@ -32,6 +32,7 @@
             btnUpdateAll = new Button();
             btnBack = new PictureBox();
             btnClose = new PictureBox();
+            lblLastUpdate = new Label();
             ((System.ComponentModel.ISupportInitialize)btnBack).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnClose).BeginInit();
             SuspendLayout();
@@ -74,11 +75,21 @@
             btnClose.TabStop = false;
             btnClose.Click += btnClose_Click;
             // 
+            // lblLastUpdate
+            // 
+            lblLastUpdate.AutoSize = true;
+            lblLastUpdate.Location = new Point(12, 32);
+            lblLastUpdate.Name = "lblLastUpdate";
+            lblLastUpdate.Size = new Size(38, 15);
+            lblLastUpdate.TabIndex = 6;
+            lblLastUpdate.Text = "label1";
+            // 
             // UpdateAllApps
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(450, 450);
+            Controls.Add(lblLastUpdate);
             Controls.Add(btnBack);
             Controls.Add(btnClose);
             Controls.Add(btnUpdateAll);
@@ -91,6 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)btnBack).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnClose).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -98,5 +110,6 @@
         private Button btnUpdateAll;
         private PictureBox btnBack;
         private PictureBox btnClose;
+        private Label lblLastUpdate;
     }
 }

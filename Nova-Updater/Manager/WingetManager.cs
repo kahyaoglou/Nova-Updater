@@ -18,6 +18,9 @@ namespace Nova_Updater.Manager
                     return;
                 }
 
+                Properties.Settings.Default.LastUpdateTime = DateTime.Now;
+                Properties.Settings.Default.Save();
+
                 await RunCommandAsync(arguments);
             }
             catch (Exception ex)
