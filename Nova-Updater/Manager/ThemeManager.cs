@@ -61,11 +61,7 @@ namespace Nova_Updater.Manager
             label.Font = new Font("Segoe UI", 11F, FontStyle.Italic);
             label.ForeColor = foreColor;
             label.BorderStyle = BorderStyle.None;
-            label.TextAlign = ContentAlignment.MiddleCenter;
-            label.Padding = new Padding(4);
-            label.AutoSize = false;
-            label.Height = 30;
-            label.Width = 350;
+            label.AutoSize = true;
         }
     }
 }

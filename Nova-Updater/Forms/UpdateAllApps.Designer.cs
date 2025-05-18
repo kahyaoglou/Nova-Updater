@@ -78,7 +78,7 @@
             // lblLastUpdate
             // 
             lblLastUpdate.AutoSize = true;
-            lblLastUpdate.Location = new Point(12, 32);
+            lblLastUpdate.Location = new Point(12, 22);
             lblLastUpdate.Name = "lblLastUpdate";
             lblLastUpdate.Size = new Size(38, 15);
             lblLastUpdate.TabIndex = 6;
